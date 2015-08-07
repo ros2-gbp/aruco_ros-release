@@ -1,0 +1,12 @@
+Source: ros-indigo-aruco-msgs
+Section: misc
+Priority: extra
+Maintainer: Bence Magyar <bence.magyar@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin, ros-indigo-geometry-msgs, ros-indigo-message-generation, ros-indigo-std-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-indigo-aruco-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-geometry-msgs, ros-indigo-message-runtime, ros-indigo-std-msgs
+Description: The aruco_msgs package

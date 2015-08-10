@@ -1,0 +1,12 @@
+Source: ros-indigo-aruco
+Section: misc
+Priority: extra
+Maintainer: Bence Magyar <bence.magyar.robotics@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), libopencv-dev, ros-indigo-catkin
+Homepage: http://www.uco.es/investiga/grupos/ava/node/26
+Standards-Version: 3.9.2
+
+Package: ros-indigo-aruco
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libopencv-dev
+Description: The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain). It provides real-time marker based 3D pose estimation using AR markers.

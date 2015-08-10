@@ -1,0 +1,12 @@
+Source: ros-indigo-aruco-ros
+Section: misc
+Priority: extra
+Maintainer: Bence Magyar <bence.magyar.robotics@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-aruco, ros-indigo-aruco-msgs, ros-indigo-catkin, ros-indigo-cv-bridge, ros-indigo-dynamic-reconfigure, ros-indigo-geometry-msgs, ros-indigo-image-transport, ros-indigo-roscpp, ros-indigo-tf
+Homepage: http://www.uco.es/investiga/grupos/ava/node/26
+Standards-Version: 3.9.2
+
+Package: ros-indigo-aruco-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-indigo-aruco, ros-indigo-aruco-msgs, ros-indigo-cv-bridge, ros-indigo-dynamic-reconfigure, ros-indigo-geometry-msgs, ros-indigo-image-transport, ros-indigo-roscpp, ros-indigo-tf
+Description: The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain). It provides real-time marker based 3D pose estimation using AR markers.

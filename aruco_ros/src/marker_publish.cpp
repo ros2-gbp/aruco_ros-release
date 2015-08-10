@@ -44,66 +44,73 @@ or implied, of Rafael Muñoz Salinas.
 #include <sensor_msgs/image_encodings.h>
 #include <aruco_ros/aruco_ros_utils.h>
 #include <aruco_msgs/MarkerArray.h>
-#include <tf/transform_broadcaster.h>
 #include <tf/transform_listener.h>
+#include <std_msgs/UInt32MultiArray.h>
 
 class ArucoMarkerPublisher
 {
 private:
-  cv::Mat inImage_;
-  aruco::CameraParameters camParam_;
-  bool useRectifiedImages_;
+  // aruco stuff
   aruco::MarkerDetector mDetector_;
+  aruco::CameraParameters camParam_;
   vector<aruco::Marker> markers_;
-  aruco_msgs::MarkerArray::Ptr marker_msg_;
-  ros::Subscriber cam_info_sub_;
-  bool cam_info_received_;
-  image_transport::Publisher image_pub_;
-  image_transport::Publisher debug_pub_;
-  ros::Publisher marker_pub_;
+
+  // node params
+  bool useRectifiedImages_;
   std::string marker_frame_;
   std::string camera_frame_;
   std::string reference_frame_;
-
   double marker_size_;
 
+  // ROS pub-sub
   ros::NodeHandle nh_;
   image_transport::ImageTransport it_;
   image_transport::Subscriber image_sub_;
 
+  image_transport::Publisher image_pub_;
+  image_transport::Publisher debug_pub_;
+  ros::Publisher marker_pub_;
+  ros::Publisher marker_list_pub_;
   tf::TransformListener tfListener_;
+
+  ros::Subscriber cam_info_sub_;
+  aruco_msgs::MarkerArray::Ptr marker_msg_;
+  cv::Mat inImage_;
+  bool useCamInfo_;
+  std_msgs::UInt32MultiArray marker_list_msg_;
 
 public:
   ArucoMarkerPublisher()
-    : cam_info_received_(false),
-      nh_("~"),
-      it_(nh_)
+    : nh_("~")
+    , it_(nh_)
+    , useCamInfo_(true)
   {
     image_sub_ = it_.subscribe("/image", 1, &ArucoMarkerPublisher::image_callback, this);
-    cam_info_sub_ = nh_.subscribe("/camera_info", 1, &ArucoMarkerPublisher::cam_info_callback, this);
+
+    nh_.param<bool>("use_camera_info", useCamInfo_, true);
+    if(useCamInfo_)
+    {
+      sensor_msgs::CameraInfoConstPtr msg = ros::topic::waitForMessage<sensor_msgs::CameraInfo>("/camera_info", nh_);//, 10.0);
+      camParam_ = aruco_ros::rosCameraInfo2ArucoCamParams(*msg, useRectifiedImages_);
+      nh_.param<double>("marker_size", marker_size_, 0.05);
+      nh_.param<bool>("image_is_rectified", useRectifiedImages_, true);
+      nh_.param<std::string>("reference_frame", reference_frame_, "");
+      nh_.param<std::string>("camera_frame", camera_frame_, "");
+      ROS_ASSERT(not camera_frame_.empty());
+      if(reference_frame_.empty())
+        reference_frame_ = camera_frame_;
+    }
+    else
+    {
+      camParam_ = aruco::CameraParameters();
+    }
 
     image_pub_ = it_.advertise("result", 1);
     debug_pub_ = it_.advertise("debug", 1);
     marker_pub_ = nh_.advertise<aruco_msgs::MarkerArray>("markers", 100);
+    marker_list_pub_ = nh_.advertise<std_msgs::UInt32MultiArray>("markers_list", 10);
 
-    nh_.param<double>("marker_size", marker_size_, 0.05);
-    nh_.param<std::string>("reference_frame", reference_frame_, "");
-    nh_.param<std::string>("camera_frame", camera_frame_, "");
-    nh_.param<bool>("image_is_rectified", useRectifiedImages_, true);
-    //nh.param<int>("marker_id", marker_id, 300);
-    //nh_.param<std::string>("marker_frame", marker_frame_, "");
-    //ROS_ASSERT(camera_frame_ != "" && marker_frame_ != "");
-
-    ROS_ASSERT(! camera_frame_.empty());
-    if ( reference_frame_.empty() )
-      reference_frame_ = camera_frame_;
-
-    //ROS_INFO("Aruco node started with marker size of %f m and marker id to track: %d",
-             //marker_size, marker_id);
-    //ROS_INFO("Aruco node will publish pose to TF with %s as parent and %s as child.",
-             //reference_frame_.c_str(), marker_frame_.c_str());
-
-    marker_msg_ = aruco_msgs::MarkerArray::Ptr( new aruco_msgs::MarkerArray() );
+    marker_msg_ = aruco_msgs::MarkerArray::Ptr(new aruco_msgs::MarkerArray());
     marker_msg_->header.frame_id = reference_frame_;
     marker_msg_->header.seq = 0;
   }
@@ -114,13 +121,12 @@ public:
   {
     std::string errMsg;
 
-    if ( !tfListener_.waitForTransform(refFrame,
-                                       childFrame,
-                                       ros::Time(0),
-                                       ros::Duration(0.5),
-                                       ros::Duration(0.01),
-                                       &errMsg)
-         )
+    if(!tfListener_.waitForTransform(refFrame,
+                                     childFrame,
+                                     ros::Time(0),
+                                     ros::Duration(0.5),
+                                     ros::Duration(0.01),
+                                     &errMsg))
     {
       ROS_ERROR_STREAM("Unable to get pose from TF: " << errMsg);
       return false;
@@ -129,9 +135,9 @@ public:
     {
       try
       {
-        tfListener_.lookupTransform( refFrame, childFrame,
-                                     ros::Time(0),                  //get latest available
-                                     transform);
+        tfListener_.lookupTransform(refFrame, childFrame,
+                                    ros::Time(0),        //get latest available
+                                    transform);
       }
       catch ( const tf::TransformException& e)
       {
@@ -143,12 +149,8 @@ public:
     return true;
   }
 
-
   void image_callback(const sensor_msgs::ImageConstPtr& msg)
   {
-    static tf::TransformBroadcaster br;
-    if(cam_info_received_)
-    {
       ros::Time curr_stamp(ros::Time::now());
       cv_bridge::CvImagePtr cv_ptr;
       try
@@ -158,50 +160,70 @@ public:
 
         //clear out previous detection results
         markers_.clear();
-        marker_msg_->markers.clear();
 
         //Ok, let's detect
         mDetector_.detect(inImage_, markers_, camParam_, marker_size_, false);
-        marker_msg_->markers.resize(markers_.size());
 
-        marker_msg_->header.stamp = curr_stamp;
-        marker_msg_->header.seq++;
-
-        //get the current transform from the camera frame to output ref frame
-        tf::StampedTransform cameraToReference;
-        cameraToReference.setIdentity();
-
-        if ( reference_frame_ != camera_frame_ )
+        // marker array publish
+        if(marker_pub_.getNumSubscribers()>0)
         {
-          getTransform(reference_frame_,
-              camera_frame_,
-              cameraToReference);
+          marker_msg_->markers.clear();
+          marker_msg_->markers.resize(markers_.size());
+          marker_msg_->header.stamp = curr_stamp;
+          marker_msg_->header.seq++;
+
+          for(size_t i=0; i<markers_.size(); ++i)
+          {
+            aruco_msgs::Marker & marker_i = marker_msg_->markers.at(i);
+            marker_i.header.stamp = curr_stamp;
+            marker_i.id = markers_.at(i).id;
+            marker_i.confidence = 1.0;
+          }
+
+          // if there is camera info let's do 3D stuff
+          if(useCamInfo_)
+          {
+            //get the current transform from the camera frame to output ref frame
+            tf::StampedTransform cameraToReference;
+            cameraToReference.setIdentity();
+
+            if ( reference_frame_ != camera_frame_ )
+            {
+              getTransform(reference_frame_,
+                  camera_frame_,
+                  cameraToReference);
+            }
+
+            //Now find the transform for each detected marker
+            for(size_t i=0; i<markers_.size(); ++i)
+            {
+              aruco_msgs::Marker & marker_i = marker_msg_->markers.at(i);
+              tf::Transform transform = aruco_ros::arucoMarker2Tf(markers_[i]);
+              transform = static_cast<tf::Transform>(cameraToReference) * transform;
+              tf::poseTFToMsg(transform, marker_i.pose.pose);
+              marker_i.header.frame_id = reference_frame_;
+            }
+          }
+
+          //publish marker array
+          if (marker_msg_->markers.size() > 0)
+            marker_pub_.publish(marker_msg_);
         }
 
-        //Now find the transform for each detected marker
-        for(size_t i=0; i < markers_.size(); ++i)
+        if(marker_list_pub_.getNumSubscribers() > 0)
         {
-          tf::Transform transform = aruco_ros::arucoMarker2Tf(markers_[i]);
-          transform = static_cast<tf::Transform>(cameraToReference) * transform;
+            marker_list_msg_.data.resize(markers_.size());
+            for(size_t i=0; i<markers_.size(); ++i)
+              marker_list_msg_.data[i] = markers_[i].id;
 
-          //Maybe change this to broadcast separate transforms for each marker?
-          //tf::StampedTransform stampedTransform(transform, curr_stamp,
-              //reference_frame_, marker_frame_);
-          //br.sendTransform(stampedTransform);
+            marker_list_pub_.publish(marker_list_msg_);
+        }
 
-          aruco_msgs::Marker & marker_i = marker_msg_->markers.at(i);
-          tf::poseTFToMsg(transform, marker_i.pose.pose);
-          marker_i.header.frame_id = reference_frame_;
-          marker_i.header.stamp = curr_stamp;
-          marker_i.id = markers_.at(i).id;
-          marker_i.confidence = 1.0;
-
+        // Draw detected markers on the image for visualization
+        for(size_t i=0; i<markers_.size(); ++i)
+        {
           markers_[i].draw(inImage_,cv::Scalar(0,0,255),2);
         }
-
-        //publish marker array
-        if (marker_msg_->markers.size() > 0)
-          marker_pub_.publish(marker_msg_);
 
         //draw a 3d cube in each marker if there is 3d info
         if(camParam_.isValid() && marker_size_!=-1)
@@ -210,6 +232,7 @@ public:
             aruco::CvDrawingUtils::draw3dAxis(inImage_, markers_[i], camParam_);
         }
 
+        // publish input image with markers drawn on it
         if(image_pub_.getNumSubscribers() > 0)
         {
           //show input with augmented information
@@ -220,6 +243,7 @@ public:
           image_pub_.publish(out_msg.toImageMsg());
         }
 
+        // publish image after internal image processing
         if(debug_pub_.getNumSubscribers() > 0)
         {
           //show also the internal image resulting from the threshold operation
@@ -229,20 +253,12 @@ public:
           debug_msg.image = mDetector_.getThresholdedImage();
           debug_pub_.publish(debug_msg.toImageMsg());
         }
+
       }
       catch (cv_bridge::Exception& e)
       {
         ROS_ERROR("cv_bridge exception: %s", e.what());
       }
-    }
-  }
-
-  // wait for one camerainfo, then shut down that subscriber
-  void cam_info_callback(const sensor_msgs::CameraInfo &msg)
-  {
-    camParam_ = aruco_ros::rosCameraInfo2ArucoCamParams(msg, useRectifiedImages_);
-    cam_info_received_ = true;
-    cam_info_sub_.shutdown();
   }
 };
 

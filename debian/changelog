@@ -1,8 +1,0 @@
-ros-jade-aruco-msgs (0.0.1-0vivid) vivid; urgency=high
-
-  * Reorganize aruco_ros into 3 packages
-  * Contributors: Bence Magyar
-
- -- Bence Magyar <bence.magyar@pal-robotics.com>  Tue, 19 May 2015 22:00:00 -0000
-
-

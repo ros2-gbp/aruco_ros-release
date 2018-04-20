@@ -1,0 +1,13 @@
+Source: ros-kinetic-aruco-ros
+Section: misc
+Priority: extra
+Maintainer: Bence Magyar <bence.magyar.robotics@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-aruco, ros-kinetic-aruco-msgs, ros-kinetic-catkin, ros-kinetic-cv-bridge, ros-kinetic-dynamic-reconfigure, ros-kinetic-geometry-msgs, ros-kinetic-image-transport, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-tf, ros-kinetic-visualization-msgs
+Homepage: http://www.uco.es/investiga/grupos/ava/node/26
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-aruco-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-aruco, ros-kinetic-aruco-msgs, ros-kinetic-cv-bridge, ros-kinetic-dynamic-reconfigure, ros-kinetic-geometry-msgs, ros-kinetic-image-transport, ros-kinetic-roscpp, ros-kinetic-sensor-msgs, ros-kinetic-tf, ros-kinetic-visualization-msgs
+Description: The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain).
+ It provides real-time marker based 3D pose estimation using AR markers.

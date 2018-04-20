@@ -1,3 +1,29 @@
+## aruco_ros (kinetic) - 0.2.3-0
+
+The packages in the `aruco_ros` repository were released into the `kinetic` distro by running `/usr/local/bin/bloom-release --track kinetic --ros-distro kinetic aruco_ros` on `Fri, 20 Apr 2018 13:53:18 -0000`
+
+These packages were released:
+- `aruco`
+- `aruco_msgs`
+- `aruco_ros`
+
+Version of package(s) in repository `aruco_ros`:
+
+- upstream repository: https://github.com/pal-robotics/aruco_ros.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.2.3-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.4`
+- catkin_pkg version: `0.4.1`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## aruco_ros (indigo) - 0.2.0-0
 
 The packages in the `aruco_ros` repository were released into the `indigo` distro by running `/usr/bin/bloom-release aruco_ros --track indigo --rosdistro indigo` on `Thu, 20 Oct 2016 14:50:47 -0000`

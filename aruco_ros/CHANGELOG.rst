@@ -2,13 +2,52 @@
 Changelog for package aruco_ros
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-0.2.3 (2018-04-20)
+1.0.0 (2019-09-27)
 ------------------
-* Force marker_publisher to build after all dependencies.
+* Merge pull request `#68 <https://github.com/pal-robotics/aruco_ros//issues/68>`_ from aPonza/ros_format
+  Autoformatting as per CppStyleGuide
+* removed using namespace declarations
+* autoformatting as per CppStyleGuide
+* Merge pull request `#58 <https://github.com/pal-robotics/aruco_ros//issues/58>`_ from jrgnicho/aruco-3.0.4
+  Sets the 'useRectifiedImages' member from a parameter before it uses it
+* sets the 'useRectifiedImages' member from a parameter before it uses it
+* Update readme for new coordinates
+* Fix orientation changes in aruco 3.0.0
+* Migration to aruco 3.0.4
+* Merge branch 'indigo-devel' into kinetic-devel
+* Merge pull request `#41 <https://github.com/pal-robotics/aruco_ros//issues/41>`_ from Voidminded/kinetic-devel
+  Fixed OpenCV Calib3D link error on ROS Kinetic
 * Fixed OpenCV Calib3D link error on ROS Kinetic
+* Merge pull request `#36 <https://github.com/pal-robotics/aruco_ros//issues/36>`_ from pal-robotics/add-aruco-ros-utils
+  Add aruco_ros_utils lib and fix some missing dependencies
 * Add aruco_ros_utils lib and fix some missing dependencies
+* Merge pull request `#35 <https://github.com/pal-robotics/aruco_ros//issues/35>`_ from ugnelis/kinetic-devel
+  Removed duplicated line.
+* Removed duplicated line.
+* Merge pull request `#27 <https://github.com/pal-robotics/aruco_ros//issues/27>`_ from cehberlin/assert_fix
+  Replace assert by error message to keep library functional
+* Improved camera_frame\_ assert and removed unecessary opencv includes
 * Replace assert by error message to keep library functional
-* Contributors: Bence Magyar, Christopher Hrabia, Jordi Pages, Ugnius Malūkas, Victor Lopez, Voidminded, ethanfowler
+* Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Jorge Nicho, Ugnius Malūkas, Victor Lopez, Voidminded
+
+2.1.1 (2020-09-17)
+------------------
+* Use time stamps from image messages
+* Contributors: Markus Vieth
+
+2.1.0 (2020-01-21)
+------------------
+* Migrate to tf2 and add utilities
+* Add support for camera extrinsics when dealing with stereo cameras
+* Contributors: Victor Lopez
+
+2.0.2 (2019-11-09)
+------------------
+* Add SYSTEM to external include dirs
+* Contributors: Victor Lopez
+
+2.0.1 (2019-09-27)
+------------------
 
 0.2.2 (2017-07-25)
 ------------------

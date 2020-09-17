@@ -1,0 +1,64 @@
+ros-melodic-aruco-msgs (2.1.1-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Wed, 16 Sep 2020 22:00:00 -0000
+
+ros-melodic-aruco-msgs (2.1.0-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Mon, 20 Jan 2020 23:00:00 -0000
+
+ros-melodic-aruco-msgs (2.0.2-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Fri, 08 Nov 2019 23:00:00 -0000
+
+ros-melodic-aruco-msgs (2.0.1-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Thu, 26 Sep 2019 22:00:00 -0000
+
+ros-melodic-aruco-msgs (1.0.0-1bionic) bionic; urgency=high
+
+  * Merge branch 'indigo-devel' into kinetic-devel
+  * Contributors: Victor Lopez
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Thu, 26 Sep 2019 22:00:00 -0000
+
+ros-melodic-aruco-msgs (0.2.2-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Mon, 24 Jul 2017 22:00:00 -0000
+
+ros-melodic-aruco-msgs (0.2.1-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Thu, 20 Jul 2017 22:00:00 -0000
+
+ros-melodic-aruco-msgs (0.2.0-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Tue, 18 Oct 2016 22:00:00 -0000
+
+ros-melodic-aruco-msgs (0.1.0-1bionic) bionic; urgency=high
+
+  * Update changelogs and maintainer email
+  * Contributors: Bence Magyar
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Sun, 09 Aug 2015 22:00:00 -0000
+
+ros-melodic-aruco-msgs (0.0.1-1bionic) bionic; urgency=high
+
+  * Reorganize aruco_ros into 3 packages
+  * Contributors: Bence Magyar
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Tue, 19 May 2015 22:00:00 -0000
+
+

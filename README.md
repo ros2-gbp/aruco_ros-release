@@ -17,9 +17,9 @@ Version of package(s) in repository `aruco_ros`:
 
 Versions of tools used:
 
-- bloom version: `0.9.8`
-- catkin_pkg version: `0.4.23`
-- rosdep version: `0.20.0`
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
 - rosdistro version: `0.8.3`
 - vcstools version: `0.1.42`
 

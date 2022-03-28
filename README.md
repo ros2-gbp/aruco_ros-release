@@ -13,7 +13,7 @@ Version of package(s) in repository `aruco_ros`:
 - release repository: unknown
 - rosdistro version: `null`
 - old version: `null`
-- new version: `3.0.1-1`
+- new version: `3.0.1-2`
 
 Versions of tools used:
 

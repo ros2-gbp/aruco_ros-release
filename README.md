@@ -1,3 +1,29 @@
+## aruco_ros (noetic) - 3.0.1-3
+
+The packages in the `aruco_ros` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic --track noetic aruco_ros` on `Tue, 29 Mar 2022 14:00:54 -0000`
+
+These packages were released:
+- `aruco`
+- `aruco_msgs`
+- `aruco_ros`
+
+Version of package(s) in repository `aruco_ros`:
+
+- upstream repository: https://github.com/pal-robotics/aruco_ros.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `3.0.1-2`
+- new version: `3.0.1-3`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `0.4.24`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## aruco_ros (noetic) - 3.0.1-1
 
 The packages in the `aruco_ros` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic --track noetic aruco_ros --edit` on `Tue, 15 Mar 2022 11:27:13 -0000`

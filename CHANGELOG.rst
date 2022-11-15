@@ -30,6 +30,37 @@ Changelog for package aruco_ros
 * Replace assert by error message to keep library functional
 * Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Jorge Nicho, Ugnius Malūkas, Victor Lopez, Voidminded
 
+3.1.2 (2022-11-10)
+------------------
+
+3.1.1 (2022-11-08)
+------------------
+
+3.1.0 (2022-11-07)
+------------------
+* Merge branch 'feat/aruco-3.1.5-migration-gallium' into 'gallium-devel'
+  ArUCO 3.1.5 migration gallium
+  See merge request ros-overlays/aruco_ros!5
+* Add correct fisheye distortion functionality
+* migrate to 3.1.5
+* Contributors: josegarcia, saikishor
+
+3.0.3 (2022-05-16)
+------------------
+* Merge branch 'missing_catkin_export_dep' into 'gallium-devel'
+  added the missing catkin_EXPORTED_TARGETS dependency
+  See merge request ros-overlays/aruco_ros!3
+* added the missing catkin_EXPORTED_TARGETS dependency
+* Contributors: Sai Kishor Kothakota, saikishor
+
+3.0.2 (2022-04-05)
+------------------
+* Merge pull request #103 from bmagyar/make-sai-maintainer
+  Make Sai maintainer of all aruco_ros packages
+* Make Sai maintainer of all
+* Update license tags in the package.xml
+* Contributors: Bence Magyar, Sai Kishor Kothakota
+
 3.0.1 (2022-02-10)
 ------------------
 * Merge branch 'fix_camera_matrix_gallium' into 'gallium-devel'

@@ -30,49 +30,36 @@ Changelog for package aruco_ros
 * Replace assert by error message to keep library functional
 * Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Jorge Nicho, Ugnius Malūkas, Victor Lopez, Voidminded
 
-3.1.2 (2022-11-10)
+2.2.1 (2022-11-10)
 ------------------
 
-3.1.1 (2022-11-08)
+2.2.0 (2022-11-07)
 ------------------
-
-3.1.0 (2022-11-07)
-------------------
-* Merge branch 'feat/aruco-3.1.5-migration-gallium' into 'gallium-devel'
-  ArUCO 3.1.5 migration gallium
-  See merge request ros-overlays/aruco_ros!5
+* Merge branch 'feat/aruco-3.1.5-migration' into 'ferrum-devel'
+  ArUCO 3.1.5 migration
+  See merge request ros-overlays/aruco_ros!4
 * Add correct fisheye distortion functionality
 * migrate to 3.1.5
 * Contributors: josegarcia, saikishor
 
-3.0.3 (2022-05-16)
+2.1.4 (2022-05-16)
 ------------------
-* Merge branch 'missing_catkin_export_dep' into 'gallium-devel'
-  added the missing catkin_EXPORTED_TARGETS dependency
-  See merge request ros-overlays/aruco_ros!3
 * added the missing catkin_EXPORTED_TARGETS dependency
-* Contributors: Sai Kishor Kothakota, saikishor
+* Contributors: Sai Kishor Kothakota
 
-3.0.2 (2022-04-05)
+2.1.3 (2022-04-05)
 ------------------
-* Merge pull request #103 from bmagyar/make-sai-maintainer
-  Make Sai maintainer of all aruco_ros packages
 * Make Sai maintainer of all
 * Update license tags in the package.xml
 * Contributors: Bence Magyar, Sai Kishor Kothakota
 
-3.0.1 (2022-02-10)
+2.1.2 (2022-02-10)
 ------------------
-* Merge branch 'fix_camera_matrix_gallium' into 'gallium-devel'
+* Merge branch 'fix_camera_matrix' into 'ferrum-devel'
   fix the issue with the improper camera matrix with non rectified images
-  See merge request ros-overlays/aruco_ros!2
+  See merge request ros-overlays/aruco_ros!1
 * fix the issue with the improper camera matrix with non rectified images
 * Contributors: Sai Kishor Kothakota, saikishor
-
-3.0.0 (2021-07-16)
-------------------
-* fixes pal-robotics/aruco_ros/#89
-* Contributors: 444lhc
 
 2.1.1 (2020-09-17)
 ------------------

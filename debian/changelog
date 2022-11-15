@@ -1,0 +1,132 @@
+ros-melodic-aruco (2.2.1-1bionic) bionic; urgency=high
+
+  * Merge branch 'fix_disable_pal_flags' into 'ferrum-devel'
+    disable the shadow compilation flag
+    See merge request ros-overlays/aruco_ros!7
+  * disable the shadow compilation flag
+  * Contributors: Sai Kishor Kothakota, saikishor
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 10 Nov 2022 00:00:00 -0000
+
+ros-melodic-aruco (2.2.0-1bionic) bionic; urgency=high
+
+  * Merge branch 'feat/aruco-3.1.5-migration' into 'ferrum-devel'
+    ArUCO 3.1.5 migration
+    See merge request ros-overlays/aruco_ros!4
+  * replace disable_pal_flags() with set DISABLE_PAL_FLAGS
+  * clang formatting
+  * add support for extrinsics with stereo cameras
+  * Add correct fisheye distortion functionality
+  * migrate to 3.1.5
+  * Contributors: josecarlos, josegarcia, saikishor
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 07 Nov 2022 00:00:00 -0000
+
+ros-melodic-aruco (2.1.4-1bionic) bionic; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 16 May 2022 00:00:00 -0000
+
+ros-melodic-aruco (2.1.3-1bionic) bionic; urgency=high
+
+  * Make Sai maintainer of all
+  * Update license tags in the package.xml
+  * Contributors: Bence Magyar, Sai Kishor Kothakota
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 05 Apr 2022 00:00:00 -0000
+
+ros-melodic-aruco (2.1.2-1bionic) bionic; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 10 Feb 2022 00:00:00 -0000
+
+ros-melodic-aruco (2.1.1-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Thu, 17 Sep 2020 00:00:00 -0000
+
+ros-melodic-aruco (2.1.0-1bionic) bionic; urgency=high
+
+  * Add param to correct fisheye distortion with special CV functions
+  * Add support for camera extrinsics when dealing with stereo cameras
+  * Contributors: Victor Lopez
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Tue, 21 Jan 2020 00:00:00 -0000
+
+ros-melodic-aruco (2.0.2-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Sat, 09 Nov 2019 00:00:00 -0000
+
+ros-melodic-aruco (2.0.1-1bionic) bionic; urgency=high
+
+  * Fix dependency
+  * Contributors: Victor Lopez
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Fri, 27 Sep 2019 00:00:00 -0000
+
+ros-melodic-aruco (1.0.0-1bionic) bionic; urgency=high
+
+  * Fix shadowed variables
+  * Add SYSTEN to include dirs
+  * Merge pull request #68 <https://github.com/pal-robotics/aruco_ros//issues/68> from aPonza/ros_format
+    Autoformatting as per CppStyleGuide
+  * removed using namespace declarations
+  * autoformatting as per CppStyleGuide
+  * Migration to aruco 3.0.4
+  * Merge branch 'indigo-devel' into kinetic-devel
+  * Completely remove debug print
+  * Merge pull request #37 <https://github.com/pal-robotics/aruco_ros//issues/37> from pal-robotics/remove-debug-print
+    Remove debug log msg
+  * Remove debug log msg
+  * Merge pull request #29 <https://github.com/pal-robotics/aruco_ros//issues/29> from cehberlin/kinetic-devel
+    forcing opencv3 build for kinetic
+  * forcing opencv3 build for kinetic
+  * Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Victor Lopez
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Fri, 27 Sep 2019 00:00:00 -0000
+
+ros-melodic-aruco (0.2.2-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Tue, 25 Jul 2017 00:00:00 -0000
+
+ros-melodic-aruco (0.2.1-1bionic) bionic; urgency=high
+
+
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Fri, 21 Jul 2017 00:00:00 -0000
+
+ros-melodic-aruco (0.2.0-1bionic) bionic; urgency=high
+
+  * Fix compilation error in Ubuntu 16.04
+    With this change, aruco_ros compiles properly in Ubuntu 16.04, ROS kinetic.
+  * Contributors: Francisco
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Wed, 19 Oct 2016 00:00:00 -0000
+
+ros-melodic-aruco (0.1.0-1bionic) bionic; urgency=high
+
+  * Depend on libopencv-dev directly
+  * Replace opencv2 dependency with cv_bridge
+  * Update changelogs and maintainer email
+  * Add aruco marker generator and opencv dependency
+  * Remove duplicated images
+  * Remove old launch files
+  * Contributors: Bence Magyar
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Mon, 10 Aug 2015 00:00:00 -0000
+
+ros-melodic-aruco (0.0.1-1bionic) bionic; urgency=high
+
+  * Initial release
+  * Contributors: Bence Magyar
+
+ -- Bence Magyar <bence.magyar.robotics@gmail.com>  Wed, 20 May 2015 00:00:00 -0000
+
+

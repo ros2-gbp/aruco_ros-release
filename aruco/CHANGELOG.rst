@@ -21,6 +21,42 @@ Changelog for package aruco
 * forcing opencv3 build for kinetic
 * Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Victor Lopez
 
+3.1.2 (2022-11-10)
+------------------
+* disable the shadow compilation flag
+* Contributors: Sai Kishor Kothakota
+
+3.1.1 (2022-11-08)
+------------------
+* Merge branch 'fix/remove-markerlabelers' into 'gallium-devel'
+  removed markerlabelers folder
+  See merge request ros-overlays/aruco_ros!6
+* removed markerlabelers folder
+* Contributors: josecarlos, saikishor
+
+3.1.0 (2022-11-07)
+------------------
+* Merge branch 'feat/aruco-3.1.5-migration-gallium' into 'gallium-devel'
+  ArUCO 3.1.5 migration gallium
+  See merge request ros-overlays/aruco_ros!5
+* replace disable_pal_flags() with set DISABLE_PAL_FLAGS
+* clang formatting
+* add support for extrinsics with stereo cameras
+* Add correct fisheye distortion functionality
+* migrate to 3.1.5
+* Contributors: josecarlos, josegarcia, saikishor
+
+3.0.3 (2022-05-16)
+------------------
+
+3.0.2 (2022-04-05)
+------------------
+* Merge pull request #103 from bmagyar/make-sai-maintainer
+  Make Sai maintainer of all aruco_ros packages
+* Make Sai maintainer of all
+* Update license tags in the package.xml
+* Contributors: Bence Magyar, Sai Kishor Kothakota
+
 3.0.1 (2022-02-10)
 ------------------
 

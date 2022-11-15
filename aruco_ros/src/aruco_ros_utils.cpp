@@ -9,7 +9,7 @@
 aruco::CameraParameters aruco_ros::rosCameraInfo2ArucoCamParams(const sensor_msgs::CameraInfo& cam_info,
                                                                 bool useRectifiedParameters)
 {
-  cv::Mat cameraMatrix(3, 4, CV_64FC1);
+  cv::Mat cameraMatrix(3, 4, CV_64FC1, 0.0);
   cv::Mat distorsionCoeff(4, 1, CV_64FC1);
   cv::Size size(cam_info.width, cam_info.height);
 
@@ -34,8 +34,11 @@ aruco::CameraParameters aruco_ros::rosCameraInfo2ArucoCamParams(const sensor_msg
   }
   else
   {
+    cv::Mat cameraMatrixFromK(3, 3, CV_64FC1, 0.0);
     for (int i = 0; i < 9; ++i)
-      cameraMatrix.at<double>(i % 3, i - (i % 3) * 3) = cam_info.K[i];
+      cameraMatrixFromK.at<double>(i % 3, i - (i % 3) * 3) = cam_info.K[i];
+    cameraMatrixFromK.copyTo(cameraMatrix(cv::Rect(0, 0, 3, 3)));
+
 
     if (cam_info.D.size() == 4)
     {
@@ -96,10 +99,10 @@ std::vector<aruco::Marker> aruco_ros::detectMarkers(const cv::Mat &img, const ar
       //        pal_vision_util::dctNormalization(inImage, inImageNorm,
       //        dctComponentsToRemove); inImage = inImageNorm;
     }
-    
+
     // detection results will go into "markers"
     markers.clear();
-    // ok, let's detect 
+    // ok, let's detect
     if (detector)
     {
       detector->detect(img, markers, cam_params, marker_size, false, correct_fisheye);

@@ -30,6 +30,37 @@ Changelog for package aruco_ros
 * Replace assert by error message to keep library functional
 * Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Jorge Nicho, Ugnius Malūkas, Victor Lopez, Voidminded
 
+2.2.1 (2022-11-10)
+------------------
+
+2.2.0 (2022-11-07)
+------------------
+* Merge branch 'feat/aruco-3.1.5-migration' into 'ferrum-devel'
+  ArUCO 3.1.5 migration
+  See merge request ros-overlays/aruco_ros!4
+* Add correct fisheye distortion functionality
+* migrate to 3.1.5
+* Contributors: josegarcia, saikishor
+
+2.1.4 (2022-05-16)
+------------------
+* added the missing catkin_EXPORTED_TARGETS dependency
+* Contributors: Sai Kishor Kothakota
+
+2.1.3 (2022-04-05)
+------------------
+* Make Sai maintainer of all
+* Update license tags in the package.xml
+* Contributors: Bence Magyar, Sai Kishor Kothakota
+
+2.1.2 (2022-02-10)
+------------------
+* Merge branch 'fix_camera_matrix' into 'ferrum-devel'
+  fix the issue with the improper camera matrix with non rectified images
+  See merge request ros-overlays/aruco_ros!1
+* fix the issue with the improper camera matrix with non rectified images
+* Contributors: Sai Kishor Kothakota, saikishor
+
 2.1.1 (2020-09-17)
 ------------------
 * Use time stamps from image messages

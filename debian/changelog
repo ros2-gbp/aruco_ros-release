@@ -1,0 +1,160 @@
+ros-humble-aruco (5.0.0-1jammy) jammy; urgency=high
+
+  * fixed cornerUpsample slicing bug issue
+  * disable tests for package aruco
+  * added missing ament exports in CMakeLists.txt
+  * added ament_lint test to the packages aruco and aruco_msgs
+  * added minor fix in aruco CMakeLists.txt
+  * added the ament configuration to build with colcon
+  * Contributors: Noel Jimenez, Sai Kishor Kothakota, josegarcia
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 08 Feb 2023 00:00:00 -0000
+
+ros-humble-aruco (3.1.2-1jammy) jammy; urgency=high
+
+  * disable the shadow compilation flag
+  * Contributors: Sai Kishor Kothakota
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 10 Nov 2022 00:00:00 -0000
+
+ros-humble-aruco (3.1.1-1jammy) jammy; urgency=high
+
+  * Merge branch 'fix/remove-markerlabelers' into 'gallium-devel'
+    removed markerlabelers folder
+    See merge request ros-overlays/aruco_ros!6
+  * removed markerlabelers folder
+  * Contributors: josecarlos, saikishor
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 08 Nov 2022 00:00:00 -0000
+
+ros-humble-aruco (3.1.0-1jammy) jammy; urgency=high
+
+  * Merge branch 'feat/aruco-3.1.5-migration-gallium' into 'gallium-devel'
+    ArUCO 3.1.5 migration gallium
+    See merge request ros-overlays/aruco_ros!5
+  * replace disable_pal_flags() with set DISABLE_PAL_FLAGS
+  * clang formatting
+  * add support for extrinsics with stereo cameras
+  * Add correct fisheye distortion functionality
+  * migrate to 3.1.5
+  * Contributors: josecarlos, josegarcia, saikishor
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 07 Nov 2022 00:00:00 -0000
+
+ros-humble-aruco (3.0.3-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 16 May 2022 00:00:00 -0000
+
+ros-humble-aruco (3.0.2-1jammy) jammy; urgency=high
+
+  * Merge pull request #103 from bmagyar/make-sai-maintainer
+    Make Sai maintainer of all aruco_ros packages
+  * Make Sai maintainer of all
+  * Update license tags in the package.xml
+  * Contributors: Bence Magyar, Sai Kishor Kothakota
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 05 Apr 2022 00:00:00 -0000
+
+ros-humble-aruco (3.0.1-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 10 Feb 2022 00:00:00 -0000
+
+ros-humble-aruco (3.0.0-1jammy) jammy; urgency=high
+
+  * fixes pal-robotics/aruco_ros/#89
+  * Contributors: 444lhc
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 16 Jul 2021 00:00:00 -0000
+
+ros-humble-aruco (2.1.1-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 17 Sep 2020 00:00:00 -0000
+
+ros-humble-aruco (2.1.0-1jammy) jammy; urgency=high
+
+  * Add param to correct fisheye distortion with special CV functions
+  * Add support for camera extrinsics when dealing with stereo cameras
+  * Contributors: Victor Lopez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 21 Jan 2020 00:00:00 -0000
+
+ros-humble-aruco (2.0.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Sat, 09 Nov 2019 00:00:00 -0000
+
+ros-humble-aruco (2.0.1-1jammy) jammy; urgency=high
+
+  * Fix dependency
+  * Contributors: Victor Lopez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 27 Sep 2019 00:00:00 -0000
+
+ros-humble-aruco (1.0.0-1jammy) jammy; urgency=high
+
+  * Fix shadowed variables
+  * Add SYSTEN to include dirs
+  * Merge pull request #68 <https://github.com/pal-robotics/aruco_ros//issues/68> from aPonza/ros_format
+    Autoformatting as per CppStyleGuide
+  * removed using namespace declarations
+  * autoformatting as per CppStyleGuide
+  * Migration to aruco 3.0.4
+  * Merge branch 'indigo-devel' into kinetic-devel
+  * Completely remove debug print
+  * Merge pull request #37 <https://github.com/pal-robotics/aruco_ros//issues/37> from pal-robotics/remove-debug-print
+    Remove debug log msg
+  * Remove debug log msg
+  * Merge pull request #29 <https://github.com/pal-robotics/aruco_ros//issues/29> from cehberlin/kinetic-devel
+    forcing opencv3 build for kinetic
+  * forcing opencv3 build for kinetic
+  * Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Victor Lopez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 27 Sep 2019 00:00:00 -0000
+
+ros-humble-aruco (0.2.2-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 25 Jul 2017 00:00:00 -0000
+
+ros-humble-aruco (0.2.1-1jammy) jammy; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 21 Jul 2017 00:00:00 -0000
+
+ros-humble-aruco (0.2.0-1jammy) jammy; urgency=high
+
+  * Fix compilation error in Ubuntu 16.04
+    With this change, aruco_ros compiles properly in Ubuntu 16.04, ROS kinetic.
+  * Contributors: Francisco
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 19 Oct 2016 00:00:00 -0000
+
+ros-humble-aruco (0.1.0-1jammy) jammy; urgency=high
+
+  * Depend on libopencv-dev directly
+  * Replace opencv2 dependency with cv_bridge
+  * Update changelogs and maintainer email
+  * Add aruco marker generator and opencv dependency
+  * Remove duplicated images
+  * Remove old launch files
+  * Contributors: Bence Magyar
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 10 Aug 2015 00:00:00 -0000
+
+ros-humble-aruco (0.0.1-1jammy) jammy; urgency=high
+
+  * Initial release
+  * Contributors: Bence Magyar
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 20 May 2015 00:00:00 -0000
+
+

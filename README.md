@@ -1,3 +1,29 @@
+## aruco_ros (humble) - 5.0.3-1
+
+The packages in the `aruco_ros` repository were released into the `humble` distro by running `/usr/bin/bloom-release --track humble --rosdistro humble aruco_ros` on `Tue, 03 Oct 2023 07:24:01 -0000`
+
+These packages were released:
+- `aruco`
+- `aruco_msgs`
+- `aruco_ros`
+
+Version of package(s) in repository `aruco_ros`:
+
+- upstream repository: https://github.com/pal-robotics/aruco_ros.git
+- release repository: https://github.com/pal-gbp/aruco_ros-release.git
+- rosdistro version: `5.0.0-1`
+- old version: `5.0.0-1`
+- new version: `5.0.3-1`
+
+Versions of tools used:
+
+- bloom version: `0.11.2`
+- catkin_pkg version: `0.5.2`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## aruco_ros (humble) - 5.0.0-1
 
 The packages in the `aruco_ros` repository were released into the `humble` distro by running `/usr/bin/bloom-release --track humble --rosdistro humble aruco_ros` on `Wed, 08 Feb 2023 13:22:59 -0000`

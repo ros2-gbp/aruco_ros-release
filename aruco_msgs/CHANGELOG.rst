@@ -7,6 +7,15 @@ Changelog for package aruco_msgs
 * Merge branch 'indigo-devel' into kinetic-devel
 * Contributors: Victor Lopez
 
+5.0.3 (2023-10-03)
+------------------
+
+5.0.2 (2023-03-20)
+------------------
+
+5.0.1 (2023-03-06)
+------------------
+
 5.0.0 (2023-02-08)
 ------------------
 * added ament_lint test to the packages aruco and aruco_msgs

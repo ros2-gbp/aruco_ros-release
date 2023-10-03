@@ -1,0 +1,136 @@
+ros-humble-aruco-msgs (5.0.3-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 03 Oct 2023 00:00:00 -0000
+
+ros-humble-aruco-msgs (5.0.2-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 20 Mar 2023 00:00:00 -0000
+
+ros-humble-aruco-msgs (5.0.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 06 Mar 2023 00:00:00 -0000
+
+ros-humble-aruco-msgs (5.0.0-1bullseye) bullseye; urgency=high
+
+  * added ament_lint test to the packages aruco and aruco_msgs
+  * aruco_msgs - added the ament configuration to build ROS2 msgs
+  * Contributors: Sai Kishor Kothakota
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 08 Feb 2023 00:00:00 -0000
+
+ros-humble-aruco-msgs (3.1.2-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 10 Nov 2022 00:00:00 -0000
+
+ros-humble-aruco-msgs (3.1.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 08 Nov 2022 00:00:00 -0000
+
+ros-humble-aruco-msgs (3.1.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 07 Nov 2022 00:00:00 -0000
+
+ros-humble-aruco-msgs (3.0.3-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 16 May 2022 00:00:00 -0000
+
+ros-humble-aruco-msgs (3.0.2-1bullseye) bullseye; urgency=high
+
+  * Merge pull request #103 from bmagyar/make-sai-maintainer
+    Make Sai maintainer of all aruco_ros packages
+  * Make Sai maintainer of all
+  * Update license tags in the package.xml
+  * Contributors: Bence Magyar, Sai Kishor Kothakota
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 05 Apr 2022 00:00:00 -0000
+
+ros-humble-aruco-msgs (3.0.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 10 Feb 2022 00:00:00 -0000
+
+ros-humble-aruco-msgs (3.0.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 16 Jul 2021 00:00:00 -0000
+
+ros-humble-aruco-msgs (2.1.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Thu, 17 Sep 2020 00:00:00 -0000
+
+ros-humble-aruco-msgs (2.1.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 21 Jan 2020 00:00:00 -0000
+
+ros-humble-aruco-msgs (2.0.2-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Sat, 09 Nov 2019 00:00:00 -0000
+
+ros-humble-aruco-msgs (2.0.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 27 Sep 2019 00:00:00 -0000
+
+ros-humble-aruco-msgs (1.0.0-1bullseye) bullseye; urgency=high
+
+  * Merge branch 'indigo-devel' into kinetic-devel
+  * Contributors: Victor Lopez
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 27 Sep 2019 00:00:00 -0000
+
+ros-humble-aruco-msgs (0.2.2-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Tue, 25 Jul 2017 00:00:00 -0000
+
+ros-humble-aruco-msgs (0.2.1-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Fri, 21 Jul 2017 00:00:00 -0000
+
+ros-humble-aruco-msgs (0.2.0-1bullseye) bullseye; urgency=high
+
+
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 19 Oct 2016 00:00:00 -0000
+
+ros-humble-aruco-msgs (0.1.0-1bullseye) bullseye; urgency=high
+
+  * Update changelogs and maintainer email
+  * Contributors: Bence Magyar
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Mon, 10 Aug 2015 00:00:00 -0000
+
+ros-humble-aruco-msgs (0.0.1-1bullseye) bullseye; urgency=high
+
+  * Reorganize aruco_ros into 3 packages
+  * Contributors: Bence Magyar
+
+ -- Sai Kishor Kothakota <sai.kishor@pal-robotics.com>  Wed, 20 May 2015 00:00:00 -0000
+
+

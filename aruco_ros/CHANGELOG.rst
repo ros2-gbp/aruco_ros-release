@@ -30,6 +30,11 @@ Changelog for package aruco_ros
 * Replace assert by error message to keep library functional
 * Contributors: Andrea Ponza, Bence Magyar, Christopher Hrabia, Jordi Pages, Jorge Nicho, Ugnius Malūkas, Victor Lopez, Voidminded
 
+5.0.4 (2023-11-14)
+------------------
+* Add website tag
+* Contributors: Noel Jimenez
+
 5.0.3 (2023-10-03)
 ------------------
 

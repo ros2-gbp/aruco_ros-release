@@ -1,3 +1,29 @@
+## aruco_ros (jazzy) - 5.0.5-1
+
+The packages in the `aruco_ros` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy aruco_ros` on `Thu, 09 May 2024 13:18:06 -0000`
+
+These packages were released:
+- `aruco`
+- `aruco_msgs`
+- `aruco_ros`
+
+Version of package(s) in repository `aruco_ros`:
+
+- upstream repository: https://github.com/pal-robotics/aruco_ros.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `5.0.5-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.7`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.21.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## aruco_ros (rolling) - 5.0.5-1
 
 The packages in the `aruco_ros` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling aruco_ros` on `Thu, 09 May 2024 13:02:12 -0000`

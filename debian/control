@@ -1,0 +1,13 @@
+Source: ros-jazzy-aruco-ros
+Section: misc
+Priority: optional
+Maintainer: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), image-transport-tools, libcv-bridge-dev, libgeometry-msgs-dev, libimage-transport-dev, libsensor-msgs-dev, libtf2-dev, libtf2-geometry-msgs-dev, libtf2-ros-dev, libvisualization-msgs-dev, python3-cv-bridge, python3-geometry-msgs, python3-sensor-msgs, python3-tf2, python3-tf2-geometry-msgs, python3-tf2-ros, python3-visualization-msgs, ros-geometry-msgs, ros-jazzy-ament-cmake, ros-jazzy-ament-lint-auto, ros-jazzy-ament-lint-common, ros-jazzy-aruco, ros-jazzy-aruco-msgs, ros-jazzy-rclcpp, ros-sensor-msgs, ros-visualization-msgs, ros-jazzy-ros-workspace
+Homepage: http://www.uco.es/investiga/grupos/ava/node/26
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-aruco-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, image-transport-tools, libcv-bridge-dev, libgeometry-msgs-dev, libimage-transport-dev, libsensor-msgs-dev, libtf2-dev, libtf2-geometry-msgs-dev, libtf2-ros-dev, libvisualization-msgs-dev, python3-cv-bridge, python3-geometry-msgs, python3-sensor-msgs, python3-tf2, python3-tf2-geometry-msgs, python3-tf2-ros, python3-visualization-msgs, ros-geometry-msgs, ros-jazzy-aruco, ros-jazzy-aruco-msgs, ros-jazzy-rclcpp, ros-sensor-msgs, ros-visualization-msgs, ros-jazzy-ros-workspace
+Description: The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain).
+ It provides real-time marker based 3D pose estimation using AR markers.

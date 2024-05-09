@@ -39,7 +39,11 @@
 #include "aruco/cvdrawingutils.h"
 #include "aruco_ros/aruco_ros_utils.hpp"
 
+#if __has_include("cv_bridge/cv_bridge.hpp")
+#include "cv_bridge/cv_bridge.hpp"
+#else
 #include "cv_bridge/cv_bridge.h"
+#endif
 #include "geometry_msgs/msg/point_stamped.hpp"
 #include "geometry_msgs/msg/vector3_stamped.hpp"
 #include "image_transport/image_transport.hpp"

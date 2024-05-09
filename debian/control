@@ -1,0 +1,13 @@
+Source: ros-jazzy-aruco-ros
+Section: misc
+Priority: optional
+Maintainer: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-lint-auto, ros-jazzy-ament-lint-common, ros-jazzy-aruco, ros-jazzy-aruco-msgs, ros-jazzy-cv-bridge, ros-jazzy-geometry-msgs, ros-jazzy-image-transport, ros-jazzy-rclcpp, ros-jazzy-sensor-msgs, ros-jazzy-tf2, ros-jazzy-tf2-geometry-msgs, ros-jazzy-tf2-ros, ros-jazzy-visualization-msgs, ros-jazzy-ros-workspace
+Homepage: http://www.uco.es/investiga/grupos/ava/node/26
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-aruco-ros
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-aruco, ros-jazzy-aruco-msgs, ros-jazzy-cv-bridge, ros-jazzy-geometry-msgs, ros-jazzy-image-transport, ros-jazzy-rclcpp, ros-jazzy-sensor-msgs, ros-jazzy-tf2, ros-jazzy-tf2-geometry-msgs, ros-jazzy-tf2-ros, ros-jazzy-visualization-msgs, ros-jazzy-ros-workspace
+Description: The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain).
+ It provides real-time marker based 3D pose estimation using AR markers.

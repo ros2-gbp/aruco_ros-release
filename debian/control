@@ -1,0 +1,13 @@
+Source: ros-iron-aruco
+Section: misc
+Priority: optional
+Maintainer: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), libeigen3-dev, ros-iron-ament-cmake, ros-iron-cv-bridge, ros-iron-ros-workspace
+Homepage: http://www.uco.es/investiga/grupos/ava/node/26
+Standards-Version: 3.9.2
+
+Package: ros-iron-aruco
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libeigen3-dev, ros-iron-cv-bridge, ros-iron-ros-workspace
+Description: The ARUCO Library has been developed by the Ava group of the Univeristy of Cordoba(Spain).
+ It provides real-time marker based 3D pose estimation using AR markers.

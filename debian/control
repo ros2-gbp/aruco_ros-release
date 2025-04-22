@@ -1,0 +1,12 @@
+Source: ros-kilted-aruco-msgs
+Section: misc
+Priority: optional
+Maintainer: Sai Kishor Kothakota <sai.kishor@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-kilted-ament-cmake, ros-kilted-ament-lint-auto <!nocheck>, ros-kilted-ament-lint-common <!nocheck>, ros-kilted-geometry-msgs, ros-kilted-rosidl-default-generators, ros-kilted-std-msgs, ros-kilted-ros-workspace, ros-kilted-rosidl-typesupport-fastrtps-c, ros-kilted-rosidl-typesupport-fastrtps-cpp
+Homepage: https://github.com/pal-robotics/aruco_ros
+Standards-Version: 3.9.2
+
+Package: ros-kilted-aruco-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kilted-geometry-msgs, ros-kilted-rosidl-default-runtime, ros-kilted-std-msgs, ros-kilted-ros-workspace
+Description: The aruco_msgs package

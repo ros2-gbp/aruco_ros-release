@@ -1,1 +1,1 @@
-{"base": "baf0d71", "parent": "debian/rolling/aruco_ros", "previous": "8fa5805", "trim": "", "trimbase": ""}
+{"base": "309208c2f13d", "parent": "debian/kilted/aruco_ros", "previous": "546df1ef7d73", "trim": "", "trimbase": ""}

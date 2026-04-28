@@ -250,5 +250,4 @@ tracks:
     ros_distro: rolling
     vcs_type: git
     vcs_uri: https://github.com/pal-robotics/aruco_ros.git
-    version: 5.0.5
-    version_saved: :{auto}
+    version: :{auto}

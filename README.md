@@ -1,3 +1,29 @@
+## aruco_ros (kilted) - 5.0.6-1
+
+The packages in the `aruco_ros` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --track kilted --rosdistro kilted -y aruco_ros` on `Wed, 07 Oct 2026 14:54:30 -0000`
+
+These packages were released:
+- `aruco`
+- `aruco_msgs`
+- `aruco_ros`
+
+Version of package(s) in repository `aruco_ros`:
+
+- upstream repository: https://github.com/pal-robotics/aruco_ros.git
+- release repository: https://github.com/ros2-gbp/aruco_ros-release.git
+- rosdistro version: `5.0.5-2`
+- old version: `5.0.5-2`
+- new version: `5.0.6-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## aruco_ros (jazzy) - 5.0.6-1
 
 The packages in the `aruco_ros` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --track jazzy --rosdistro jazzy -y aruco_ros` on `Wed, 07 Oct 2026 14:51:34 -0000`
